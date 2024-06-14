@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="    max-width: 600px;
+    margin: 0 auto;">
+        <canvas id="myChart" style="    aspect-ratio: auto 750 / 375;
+        display: block;
+        box-sizing: border-box;
+        height: 300px;
+        width: 600px;"></canvas>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['January', 'February', 'March', 'April', 'May'],
+            datasets: [{
+              label: 'Monthly Sales Data',
+              data: [65,59,80,81,56],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+       
+</body>
+</html>
